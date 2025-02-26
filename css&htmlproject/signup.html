@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+html,body{
+            height:100%
+        }
+        .container{
+            display: grid;
+            grid-template-columns: repeat(12,1fr);
+
+            grid-template-rows: 50px auto 50px;
+            min-height: 100%;
+            gap: 8px;
+        }
+        header{
+            grid-column:1/13;
+            font-size: 1.1em;
+            border: 1px solid;
+        }
+        header nav ul{
+            display: flex;
+            justify-content: space-around;
+            list-style-type:none;
+        }
+
+        header nav ul a{
+            text-decoration: none;
+            color:#333;
+        }
+
+        main{
+            grid-column:1/13;
+            font-size:1.5em;
+            border:1px solid;
+        }
+        form{
+            max-width: 400px;
+            margin:50px auto;
+        }
+
+        input[type="text"],input[type="password"],input[type="phone no"],input[type="date of birth"]{
+           width:100%; 
+           padding:11px;
+           margin-bottom: 10px;
+           border-radius:10px;
+           border:1px solid #e79ee7;
+        }
+        input[type="submit"]{
+            background-color: #4caf50;
+            display: block;
+            width: 50%;
+            margin: auto;
+            border-radius: 7px;
+            padding:5px;
+            color:white;
+            cursor: pointer;
+        }
+        
+
+        footer{
+            grid-column: 1/13;
+            border:1px solid;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .footer-left{
+            min-width:50%;
+            margin-left:30px;
+        }
+
+        .footer-right{
+            min-width: 50%;
+            text-align:center;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="main.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="signup.html">Sign up</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <form action="/registration.html" method="POST">
+                <input type="text"placeholder="Enter email"/>
+                <input type="password"placeholder="Enter password"/>
+                <input type="phone no"placeholder="Enter phone no"/>
+                <input type="date of birth"placeholder="Enter date of birth"/>
+                <input type="submit" value="Register"/>
+            </form>
+
+            </main>
+            <footer>
+                <div class="footer-left">2027 handbag shop</div>
+                <div class="footer-right">Mobile:0123456789></div>
+            </footer>
+    </div>
+</body>
+</html>
